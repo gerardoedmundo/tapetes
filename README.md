@@ -1,2 +1,0 @@
-# tapetes
-Tapetes de Temoaya
