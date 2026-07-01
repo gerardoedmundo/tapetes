@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tapetes de lana anudados a mano por artesanos otomíes de Temoaya desde 1969. Arte textil mexicano con durabilidad de hasta 100 años. 140,000 nudos por m².">
+    <meta name="keywords" content="tapetes otomíes, tapetes Temoaya, artesanía mexicana, tapetes anudados a mano, arte textil mexicano, Imelda Bermúdez">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tapetes Temoaya.com | Arte Textil Otomí desde 1969">
+    <meta property="og:description" content="Cada nudo representa tradición, paciencia y el legado de generaciones de artesanas mexiquenses. Durabilidad de 50-100 años.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maximoingeniero2019.wixsite.com/tapetestemoaya">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600166898405-da9535203843?w=1200">
+    
+    <title>Tapetes Temoaya | Arte Textil Otomí desde 1969</title>
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Tapetes Temoaya.com",
+        "description": "Tapetes de lana anudados a mano por artesanas otomíes de Temoaya, Estado de México",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Carretera al centro ceremonial Otomi esquina Morelos, San Pedro Arriba, Méx.",
+            "addressLocality": "Temoaya",
+            "addressRegion": "Estado de México",
+            "postalCode": "50867",
+            "addressCountry": "MX"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "19.4859878",
+            "longitude": "-99.5814801"
+        },
+        "telephone": "+52-722-2580035",
+        "email": "gecm@hotmail.com",
+        "foundingDate": "1969",
+        "founders": [
+            {
+                "@type": "Person",
+                "name": "Imelda Bermúdez Rivera"
+            }
+        ],
+        "priceRange": "$$$",
+        "openingHours": "Mo-Su 09:00-18:00",
+        "sameAs": [
+            "https://www.facebook.com/temoayatapetes"
+        ]
+    }
+    </script>
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Paleta inspirada en tapetes otomíes */
+            --color-magenta: #9B2335;
+            --color-magenta-light: #C43B4F;
+            --color-purple: #5B2C6F;
+            --color-purple-light: #7D3C98;
+            --color-blue: #1B4F72;
+            --color-gold: #D4AC0D;
+            --color-gold-light: #F4D03F;
+            --color-orange: #BA4A00;
+            --color-cream: #FAF6F0;
+            --color-warm-white: #FFFFFF;
+            --color-dark: #2C1810;
+            --color-text: #4A4A4A;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+            --transition: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-cream);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Cursor personalizado */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--color-magenta);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+            display: none;
+        }
+        
+        @media (min-width: 1024px) {
+            .cursor {
+                display: block;
+            }
+        }
+        
+        /* Navegación */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: all 0.4s var(--transition);
+            background: transparent;
+        }
+        
+        nav.scrolled {
+            background: rgba(250, 246, 240, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 30px rgba(155, 35, 53, 0.15);
+        }
+        
+        /* Logo con imagen */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s var(--transition);
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        nav.scrolled .logo-img {
+            height: 50px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-dark);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-magenta), var(--color-gold));
+            transition: width 0.3s var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-magenta);
+        }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--color-dark);
+            transition: all 0.3s;
+        }
+        
+        /* Responsive para el logo */
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 45px;
+            }
+            
+            nav.scrolled .logo-img {
+                height: 40px;
+            }
+            
+            nav {
+                padding: 1.5rem 5%;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background: var(--color-cream);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: right 0.4s var(--transition);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            section {
+                padding: 5rem 5%;
+            }
+            
+            .gallery-grid {
+                columns: 2;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                columns: 1;
+            }
+            
+            .history-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        /* Hero */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(155, 35, 53, 0.7) 0%, rgba(91, 44, 111, 0.7) 100%),
+                        url('https://images.unsplash.com/photo-1600166898405-da9535203843?w=1920&q=80') center/cover;
+            transform: scale(1.1);
+            animation: heroZoom 20s ease-in-out infinite alternate;
+        }
+        
+        @keyframes heroZoom {
+            0% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: var(--color-warm-white);
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+        
+        .hero-subtitle {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 0.5s forwards;
+            color: var(--color-gold-light);
+        }
+        
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s forwards;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1.1s forwards;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 1.4s forwards;
+        }
+        
+        .btn {
+            padding: 1.2rem 3rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-magenta) 0%, var(--color-purple) 100%);
+            color: var(--color-warm-white);
+            box-shadow: 0 4px 15px rgba(155, 35, 53, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(155, 35, 53, 0.5);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-warm-white);
+            border: 2px solid var(--color-gold);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--color-gold);
+            color: var(--color-dark);
+            transform: translateY(-3px);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--color-gold-light);
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+        
+        /* Secciones generales */
+        section {
+            padding: 8rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-label {
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--color-magenta);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 400;
+            color: var(--color-purple);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* Historia */
+        .history {
+            background: linear-gradient(135deg, var(--color-cream) 0%, #FFF5F7 100%);
+        }
+        
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        
+        .history-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+            box-shadow: 0 20px 60px rgba(155, 35, 53, 0.2);
+        }
+        
+        .history-image::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: 10px;
+            bottom: 10px;
+            border: 3px solid var(--color-magenta);
+            z-index: -1;
+        }
+        
+        .history-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: transform 0.6s var(--transition);
+        }
+        
+        .history-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .history-content h3 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--color-magenta);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        .history-content p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--color-text);
+            margin-bottom: 1.5rem;
+        }
+        
+        .history-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 2px solid var(--color-magenta-light);
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--color-magenta);
+            font-weight: 600;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--color-purple);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+        
+        /* Proceso */
+        .process {
+            background: var(--color-warm-white);
+        }
+        
+        .process-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .process-step {
+            display: grid;
+            grid-template-columns: 1fr 100px 1fr;
+            gap: 3rem;
+            margin-bottom: 5rem;
+            align-items: center;
+        }
+        
+        .process-step:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .process-step:nth-child(even) > * {
+            direction: ltr;
+        }
+        
+        .process-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+            aspect-ratio: 4/3;
+            box-shadow: 0 10px 30px rgba(91, 44, 111, 0.15);
+        }
+        
+        .process-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid var(--color-purple-light);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .process-image:hover::after {
+            opacity: 1;
+        }
+        
+        .process-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--transition);
+        }
+        
+        .process-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .process-number {
+            font-family: var(--font-serif);
+            font-size: 5rem;
+            color: var(--color-magenta-light);
+            font-weight: 300;
+            text-align: center;
+            opacity: 0.3;
+        }
+        
+        .process-content h4 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--color-purple);
+            margin-bottom: 1rem;
+        }
+        
+        .process-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--color-text);
+        }
+        
+        /* Catálogo */
+        .catalog {
+            background: linear-gradient(135deg, #FFF5F7 0%, var(--color-cream) 100%);
+        }
+        
+        .catalog-filters {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.8rem 2rem;
+            background: transparent;
+            border: 2px solid var(--color-magenta-light);
+            color: var(--color-magenta);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: linear-gradient(135deg, var(--color-magenta) 0%, var(--color-purple) 100%);
+            color: var(--color-warm-white);
+            border-color: var(--color-magenta);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(155, 35, 53, 0.3);
+        }
+        
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .product-card {
+            background: var(--color-warm-white);
+            overflow: hidden;
+            transition: all 0.4s var(--transition);
+            cursor: pointer;
+            border: 1px solid rgba(155, 35, 53, 0.1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 70px rgba(155, 35, 53, 0.2);
+        }
+        
+        .product-image {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--transition);
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-orange) 100%);
+            color: var(--color-warm-white);
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(212, 172, 13, 0.4);
+        }
+        
+        .product-info {
+            padding: 2rem;
+        }
+        
+        .product-name {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-purple);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-details {
+            font-size: 0.9rem;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+        
+        .product-price {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            color: var(--color-magenta);
+            font-weight: 600;
+        }
+        
+        /* Galería */
+        .gallery {
+            background: var(--color-warm-white);
+        }
+        
+        .gallery-grid {
+            columns: 3;
+            column-gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            border-radius: 2px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.6s var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Video */
+        .video-section {
+            background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-magenta) 100%);
+            color: var(--color-warm-white);
+            text-align: center;
+        }
+        
+        .video-container {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            border-radius: 2px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .play-button {
+            width: 80px;
+            height: 80px;
+            border: 3px solid var(--color-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .play-button:hover {
+            background: var(--color-gold);
+            transform: scale(1.1);
+        }
+        
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid var(--color-gold);
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 5px;
+        }
+        
+        .play-button:hover::after {
+            border-left-color: var(--color-purple);
+        }
+        
+        /* Testimonios */
+        .testimonials {
+            background: linear-gradient(135deg, var(--color-cream) 0%, #F9EBF0 100%);
+        }
+        
+        .testimonial-slider {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            text-align: center;
+            padding: 3rem;
+            display: none;
+        }
+        
+        .testimonial.active {
+            display: block;
+            animation: fadeIn 0.6s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .testimonial-text {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--color-purple);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--color-magenta);
+        }
+        
+        .testimonial-info h5 {
+            font-size: 1rem;
+            color: var(--color-magenta);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+        
+        .testimonial-info p {
+            font-size: 0.85rem;
+            color: var(--color-text);
+        }
+        
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--color-magenta-light);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .dot.active {
+            background: var(--color-magenta);
+            width: 30px;
+            border-radius: 5px;
+        }
+        
+        /* FAQ */
+        .faq {
+            background: var(--color-warm-white);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 2px solid rgba(155, 35, 53, 0.1);
+            padding: 2rem 0;
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            color: var(--color-purple);
+            transition: color 0.3s;
+        }
+        
+        .faq-question:hover {
+            color: var(--color-magenta);
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            color: var(--color-magenta);
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s var(--transition);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            padding-top: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--color-text);
+        }
+        
+        /* Contacto */
+        .contact {
+            background: linear-gradient(135deg, #F9EBF0 0%, var(--color-cream) 100%);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-info h3 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--color-magenta);
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--color-text);
+            margin-bottom: 2rem;
+        }
+        
+        .contact-details {
+            margin-top: 3rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: var(--color-text);
+        }
+        
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--color-magenta);
+        }
+        
+        .contact-form {
+            background: var(--color-warm-white);
+            padding: 3rem;
+            border-radius: 2px;
+            box-shadow: 0 15px 50px rgba(155, 35, 53, 0.15);
+            border: 2px solid rgba(155, 35, 53, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-purple);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(155, 35, 53, 0.2);
+            background: transparent;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-magenta);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        /* Blog */
+        .blog {
+            background: var(--color-warm-white);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .blog-card {
+            background: var(--color-cream);
+            overflow: hidden;
+            transition: all 0.4s var(--transition);
+            border: 1px solid rgba(155, 35, 53, 0.1);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(155, 35, 53, 0.15);
+        }
+        
+        .blog-image {
+            aspect-ratio: 16/10;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--transition);
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.1);
+        }
+        
+        .blog-content {
+            padding: 2rem;
+        }
+        
+        .blog-date {
+            font-size: 0.8rem;
+            color: var(--color-magenta);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .blog-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-purple);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .blog-excerpt {
+            font-size: 0.95rem;
+            color: var(--color-text);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-link {
+            color: var(--color-magenta);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            font-weight: 600;
+        }
+        
+        .blog-link:hover {
+            color: var(--color-purple);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-purple) 100%);
+            color: var(--color-warm-white);
+            padding: 5rem 5% 2rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            max-width: 1400px;
+            margin: 0 auto 4rem;
+        }
+        
+        .footer-brand h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-gold-light);
+        }
+        
+        .footer-brand p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--color-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--color-gold);
+            color: var(--color-purple);
+            transform: translateY(-3px);
+        }
+        
+        .footer-column h4 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-gold-light);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-column ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--color-gold-light);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* WhatsApp flotante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+        
+        /* Animaciones de scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s var(--transition);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    
+    <!-- Navegación -->
+    <nav>
+        <div class="logo-container">
+            <img src="images/logo-tapetes-temoaya.png" alt="Tapetes Temoaya" class="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#catalogo">Colección</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Arte Textil Otomí desde 1969</p>
+            <h1 class="hero-title">Arte tejido por manos otomíes desde el corazón de Temoaya</h1>
+            <p class="hero-description">Cada nudo representa tradición, paciencia y el legado de generaciones de artesanas mexiquenses. Piezas únicas con durabilidad de más de 40 años.</p>
+            <div class="hero-buttons">
+                <a href="#catalogo" class="btn btn-primary">Explorar Colección</a>
+                <a href="#historia" class="btn btn-secondary">Conocer Nuestra Historia</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">DESLIZA</div>
+    </section>
+    
+    <!-- Historia -->
+    <section id="historia" class="history">
+        <div class="section-header reveal">
+            <p class="section-label">Nuestra Historia</p>
+            <h2 class="section-title">Más de 50 años tejiendo tradición</h2>
+            <p class="section-description">Una historia familiar dedicada a preservar el arte ancestral de los tapetes otomíes, transmitido de generación en generación desde 1969.</p>
+        </div>
+        
+        <div class="history-grid">
+            <div class="history-image reveal">
+                <img src="images/2.jpg" alt="Artesana Imelda Bermúdez tejiendo tapete" loading="lazy">
+            </div>
+            <div class="history-content reveal">
+                <h3>El legado de una tradición viva</h3>
+                <p>En 1969, el Banco de México implementó un programa para capacitar a comunidades rurales en actividades que brindaran desarrollo económico y social. Maestros artesanos fueron enviados a Temoaya para enseñar la técnica de anudado indio, similar a la utilizada en Irán y Pakistán.</p>
+                <p>Un grupo de mujeres otomíes de Temoaya, decidió aprender esta técnica recibiendo una beca como incentivo, sin horario fijo para no afectar sus actividades domésticas. Así nació una tradición que perdura hasta hoy.</p>
+                <p>Hoy, artesanas como <strong>Imelda Bermúdez Rivera</strong>, con más de 35 años de experiencia, continúan este legado. Como ella misma dice: <em>"Aquí seguimos, porque nos gusta, porque son bonitos y por amor a nuestras tradiciones"</em>.</p>
+                
+                <div class="history-stats">
+                    <div class="stat">
+                        <div class="stat-number">55+</div>
+                        <div class="stat-label">Años de tradición</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">140K</div>
+                        <div class="stat-label">Nudos por m²</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100</div>
+                        <div class="stat-label">Años de durabilidad</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Proceso -->
+    <section id="proceso" class="process">
+        <div class="section-header reveal">
+            <p class="section-label">El Proceso Artesanal</p>
+            <h2 class="section-title">De la lana al arte: cada paso cuenta</h2>
+            <p class="section-description">Un proceso meticuloso que requiere paciencia, destreza y amor por la tradición. Cada tapete es el resultado de semanas de trabajo dedicado.</p>
+        </div>
+        
+        <div class="process-timeline">
+            <div class="process-step reveal">
+                <div class="process-image">
+                    <img src="https://images.unsplash.com/photo-1584589167171-541ce45f1eea?w=600&q=80" alt="Preparación de lana virgen" loading="lazy">
+                </div>
+                <div class="process-number">01</div>
+                <div class="process-content">
+                    <h4>Preparación de la lana</h4>
+                    <p>Seleccionamos lana virgen de la más alta calidad, importada de Argentina. Se lava, carda e hila cuidadosamente para obtener la textura y resistencia perfectas. Este proceso garantiza que cada fibra esté lista para recibir los tintes.</p>
+                </div>
+            </div>
+            
+            <div class="process-step reveal">
+                <div class="process-image">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="Diseño del tapete" loading="lazy">
+                </div>
+                <div class="process-number">02</div>
+                <div class="process-content">
+                    <h4>Diseño y boceto</h4>
+                    <p>Cada diseño es creado con base en la iconografía otomí, mazahua, huichol y colonial. Los artesanos dibujan bocetos detallados que servirán como guía durante el tejido, integrando motivos de flores, mariposas, gallos, aves y grecas ancestrales.</p>
+                </div>
+            </div>
+            
+            <div class="process-step reveal">
+                <div class="process-image">
+                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80" alt="Montaje del telar de alto liso" loading="lazy">
+                </div>
+                <div class="process-number">03</div>
+                <div class="process-content">
+                    <h4>Montaje del telar</h4>
+                    <p>Se utiliza un telar vertical de alto liso donde se monta la trama. Este marco será la estructura sobre la cual se construirá cada nudo del tapete durante semanas de trabajo dedicado.</p>
+                </div>
+            </div>
+            
+            <div class="process-step reveal">
+                <div class="process-image">
+                    <img src="https://images.unsplash.com/photo-1597423244036-ef50305e64df?w=600&q=80" alt="Anudado a mano" loading="lazy">
+                </div>
+                <div class="process-number">04</div>
+                <div class="process-content">
+                    <h4>Anudado a mano</h4>
+                    <p>El corazón del proceso: cada nudo es hecho a mano con precisión milimétrica. Un metro cuadrado requiere aproximadamente 140,000 nudos, lo que implica 40 días de trabajo con jornadas de 8-9 horas. Es aquí donde nace el arte.</p>
+                </div>
+            </div>
+            
+            <div class="process-step reveal">
+                <div class="process-image">
+                    <img src="https://images.unsplash.com/photo-1530732946747-3fedb56a7f55?w=600&q=80" alt="Rasurado y acabado" loading="lazy">
+                </div>
+                <div class="process-number">05</div>
+                <div class="process-content">
+                    <h4>Rasurado y fleco</h4>
+                    <p>Una vez completado el tejido, se rasura la superficie para uniformar la altura del pelo y revelar los detalles del diseño. Se añaden los flecos y se realizan los acabados finales que darán al tapete su textura característica.</p>
+                </div>
+            </div>
+            
+            <div class="process-step reveal">
+                <div class="process-image">
+                    <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80" alt="Lavado final" loading="lazy">
+                </div>
+                <div class="process-number">06</div>
+                <div class="process-content">
+                    <h4>Lavado y entrega</h4>
+                    <p>El tapete se lava cuidadosamente para fijar los colores y suavizar las fibras. Después del secado natural, se inspecciona cada detalle antes de ser empaquetado y enviado a su nuevo hogar, listo para ser apreciado por generaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Catálogo -->
+    <section id="catalogo" class="catalog">
+        <div class="section-header reveal">
+            <p class="section-label">Nuestra Colección</p>
+            <h2 class="section-title">Piezas únicas para espacios extraordinarios</h2>
+            <p class="section-description">Cada tapete es una obra de arte irrepetible. Descubre piezas que transformarán tu espacio en una galería de arte mexicano.</p>
+        </div>
+        
+        <div class="catalog-filters reveal">
+            <button class="filter-btn active">Todos</button>
+            <button class="filter-btn">Tamaños pequeños</button>
+            <button class="filter-btn">Tamaños medianos</button>
+            <button class="filter-btn">Gran formato</button>
+            <button class="filter-btn">Personalizados</button>
+        </div>
+        
+        <div class="catalog-grid">
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1600166898405-da9535203843?w=600&q=80" alt="Tapete Otomí 15x15 cm" loading="lazy">
+                    <span class="product-badge">Más vendido</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Tapete Otomí Pequeño</h3>
+                    <p class="product-details">15 x 15 cm · 140,000 nudos/m² · Lana virgen de Argentina</p>
+                    <p class="product-price">Consultar precio</p>
+                </div>
+            </div>
+            
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Tapete Mazahua 30x30 cm" loading="lazy">
+                    <span class="product-badge">Más vendido</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Tapete Mazahua Mediano</h3>
+                    <p class="product-details">30 x 30 cm · 140,000 nudos/m² · Lana importada</p>
+                    <p class="product-price">Consultar precio</p>
+                </div>
+            </div>
+            
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1600166898405-da9535203843?w=600&q=80" alt="Tapete Huichol Gran Formato" loading="lazy">
+                    <span class="product-badge">Edición especial</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Tapete Huichol Gran Formato</h3>
+                    <p class="product-details">Hasta 16 m² · 140,000 nudos/m² · Lana premium</p>
+                    <p class="product-price">Cotización especial</p>
+                </div>
+            </div>
+            
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="Tapete Floral Otomí" loading="lazy">
+                    <span class="product-badge">Diseño floral</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Tapete Floral Otomí</h3>
+                    <p class="product-details">Tamaño personalizado · 140,000 nudos/m² · Lana natural</p>
+                    <p class="product-price">Cotizar</p>
+                </div>
+            </div>
+            
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80" alt="Tapete Greca Ancestral" loading="lazy">
+                    <span class="product-badge">Iconografía ancestral</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Tapete Greca Ancestral</h3>
+                    <p class="product-details">Tamaño personalizado · 140,000 nudos/m² · Lana virgen</p>
+                    <p class="product-price">Cotizar</p>
+                </div>
+            </div>
+            
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1597423244036-ef50305e64df?w=600&q=80" alt="Tapete Mariposa Monarca" loading="lazy">
+                    <span class="product-badge">Personalizable</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Tapete Mariposa Monarca</h3>
+                    <p class="product-details">Tamaño personalizado · 140,000 nudos/m² · Lana premium</p>
+                    <p class="product-price">Cotizar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Galería -->
+    <section id="galeria" class="gallery">
+        <div class="section-header reveal">
+            <p class="section-label">Galería</p>
+            <h2 class="section-title">Arte en cada detalle</h2>
+            <p class="section-description">Descubre la belleza de nuestros tapetes a través de imágenes que capturan la esencia de cada pieza.</p>
+        </div>
+        
+        <div class="gallery-grid reveal">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1600166898405-da9535203843?w=600&q=80" alt="Tapete artesanal detalle" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Artesana trabajando" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="Detalle de nudos" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80" alt="Tapete en espacio moderno" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1597423244036-ef50305e64df?w=600&q=80" alt="Proceso de tejido" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1530732946747-3fedb56a7f55?w=600&q=80" alt="Tapete decorando sala" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80" alt="Lana de colores" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1584589167171-541ce45f1eea?w=600&q=80" alt="Tapete en habitación" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1600166898405-da9535203843?w=600&q=80" alt="Detalle artesanal" loading="lazy">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video -->
+    <section class="video-section">
+        <div class="section-header reveal">
+            <p class="section-label">Documental</p>
+            <h2 class="section-title">El arte de tejer historias</h2>
+            <p class="section-description">Descubre el proceso completo detrás de cada tapete y conoce a las manos que dan vida a estas obras de arte.</p>
+        </div>
+        
+        <div class="video-container reveal">
+            <div class="video-placeholder">
+                <div class="play-button"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonios -->
+    <section class="testimonials">
+        <div class="section-header reveal">
+            <p class="section-label">Testimonios</p>
+            <h2 class="section-title">Lo que dicen nuestras artesanas</h2>
+        </div>
+        
+        <div class="testimonial-slider reveal">
+            <div class="testimonial active">
+                <p class="testimonial-text">"Tengo más de 35 años de trabajar de tiempo completo haciendo nudos. No es difícil hacerlo, pero sí es muy tardado."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Imelda Bermúdez Rivera" class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h5>Imelda Bermúdez Rivera</h5>
+                        <p>Artesana con 35+ años de experiencia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"Busco enseñarles a jóvenes para que se quede alguien que siga la tradición. Aquí seguimos, porque nos gusta, porque son bonitos y por amor a nuestras tradiciones."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Imelda Bermúdez Rivera" class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h5>Imelda Bermúdez Rivera</h5>
+                        <p>Artesana con 35+ años de experiencia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"Mi esposo y yo empezábamos desde las seis de la mañana a las diez de la noche, y de esa hora le seguían los tíos hasta las seis de la mañana, y así hasta que terminamos el tapete de 16 metros."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Imelda Bermúdez Rivera" class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h5>Imelda Bermúdez Rivera</h5>
+                        <p>Sobre el tapete más grande de 16 metros</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="section-header reveal">
+            <p class="section-label">Preguntas Frecuentes</p>
+            <h2 class="section-title">Todo lo que necesitas saber</h2>
+        </div>
+        
+        <div class="faq-container reveal">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Cuánto tiempo dura un tapete de Temoaya?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Con los cuidados adecuados, nuestros tapetes pueden durar entre 50 y 100 años. La calidad de la lana virgen importada de Argentina y la técnica de anudado con 140,000 nudos por metro cuadrado garantizan una durabilidad excepcional que los convierte en piezas heredables de generación en generación.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Qué materiales utilizan?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Utilizamos lana virgen de la más alta calidad, importada de Argentina (Sudamérica). Los tintes pueden ser naturales o sintéticos de alta gama, garantizando colores vibrantes que no se desvanecen con el tiempo. La urdimbre es de algodón resistente.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Cuánto tiempo toma elaborar un tapete?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Un tapete de un metro cuadrado requiere aproximadamente 40 días de trabajo con jornadas de 8-9 horas. Piezas más grandes pueden tomar varios meses. Nuestro tapete más grande fue de 16 metros y tomó un año de trabajo familiar, turnándose día y noche.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Dónde puedo comprar sus tapetes?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Puedes adquirir nuestros tapetes directamente con nosotros en Temoaya, Estado de México, a través de Amazon, en la tienda virtual del IIFAEM (http://iifaem.edomex.gob.mx), o en las tiendas "Casart" recomendadas por el IIFAEM.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Cómo debo cuidar mi tapete?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Aspirar regularmente sin usar cepillo rotatorio, rotar el tapete cada 6 meses para desgaste uniforme, evitar exposición directa prolongada al sol, y limpiar derrames inmediatamente con un paño absorbente. Recomendamos limpieza profesional cada 2-3 años.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Puedo personalizar un diseño?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutamente. Ofrecemos servicio de personalización completa: tamaño, colores, diseño y motivos. Trabajamos contigo para crear una pieza única que se adapte perfectamente a tu espacio y visión. El tiempo de elaboración varía según el tamaño y complejidad.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Cuáles son sus tamaños más vendidos?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Nuestros tamaños más populares son 15x15 cm y 30x30 cm, perfectos para espacios pequeños o como piezas decorativas. Sin embargo, hemos creado tapetes de hasta 16 metros para proyectos especiales. Trabajamos en cualquier tamaño que necesites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog -->
+    <section id="blog" class="blog">
+        <div class="section-header reveal">
+            <p class="section-label">Blog</p>
+            <h2 class="section-title">Historias y conocimiento</h2>
+            <p class="section-description">Explora artículos sobre el arte de los tapetes otomíes, cuidados, decoración y la rica cultura detrás de cada pieza.</p>
+        </div>
+        
+        <div class="blog-grid">
+            <article class="blog-card reveal">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1600166898405-da9535203843?w=600&q=80" alt="Tapete duradero" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">15 Junio 2026</p>
+                    <h3 class="blog-title">¿Por qué un tapete de Temoaya puede durar más de 50 años?</h3>
+                    <p class="blog-excerpt">Descubre la ciencia y el arte detrás de la durabilidad excepcional de los tapetes anudados a mano por artesanos otomíes con 140,000 nudos por metro cuadrado.</p>
+                    <a href="#" class="blog-link">Leer más →</a>
+                </div>
+            </article>
+            
+            <article class="blog-card reveal">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Proceso artesanal" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">10 Junio 2026</p>
+                    <h3 class="blog-title">¿Cómo se hace un tapete anudado a mano?</h3>
+                    <p class="blog-excerpt">Un recorrido detallado por las 7 etapas del proceso artesanal que convierte la lana virgen de Argentina en una obra de arte textil.</p>
+                    <a href="#" class="blog-link">Leer más →</a>
+                </div>
+            </article>
+            
+            <article class="blog-card reveal">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="Historia otomí" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">5 Junio 2026</p>
+                    <h3 class="blog-title">Historia de los tapetes otomíes: de Persia a Temoaya</h3>
+                    <p class="blog-excerpt">La fascinante historia de cómo una técnica ancestral llegó a México en 1969 y se transformó en una tradición única de las mujeres otomíes.</p>
+                    <a href="#" class="blog-link">Leer más →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="section-header reveal">
+            <p class="section-label">Contacto</p>
+            <h2 class="section-title">Hablemos de tu próximo tapete</h2>
+            <p class="section-description">¿Tienes preguntas o quieres encargar una pieza personalizada? Estamos aquí para ayudarte.</p>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>Visítanos o escríbenos</h3>
+                <p>Estamos disponibles para atenderte personalmente en nuestro taller en Temoaya, o puedes contactarnos por cualquiera de nuestros canales. Responderemos a la brevedad.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span>Carretera al centro ceremonial Otomi esquina Morelos, San Pedro Arriba, Temoaya, Estado de México</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <span>722 258 0035</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>gecm@hotmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Lunes a Domingo: 9:00 - 18:00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="contact-form reveal">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>TAPETES TEMOAYA.COM</h3>
+                <p>Arte textil otomí elaborado a mano desde 1969. Cada tapete es una pieza única que representa la tradición, paciencia y el legado de generaciones de artesanas mexiquenses. Durabilidad de 50-100 años.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/temoayatapetes" target="_blank" aria-label="Facebook">
+                        <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#historia">Historia</a></li>
+                    <li><a href="#proceso">Proceso</a></li>
+                    <li><a href="#catalogo">Colección</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#">Tapetes a medida</a></li>
+                    <li><a href="#">Diseño personalizado</a></li>
+                    <li><a href="#">Proyectos comerciales</a></li>
+                    <li><a href="#">Asesoría en decoración</a></li>
+                    <li><a href="#">Envíos nacionales</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Puntos de venta</h4>
+                <ul>
+                    <li><a href="#">Amazon</a></li>
+                    <li><a href="http://iifaem.edomex.gob.mx" target="_blank">IIFAEM</a></li>
+                    <li><a href="#">Tiendas Casart</a></li>
+                    <li><a href="#">Taller en Temoaya</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tapetes Temoaya.com. Todos los derechos reservados. Arte textil otomí desde 1969. | Hecho con ❤️ en Temoaya, Estado de México</p>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/527222580035" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+    
+    <script>
+        // Cursor personalizado
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 10 + 'px';
+            cursor.style.top = e.clientY - 10 + 'px';
+        });
+        
+        document.querySelectorAll('a, button, .product-card, .gallery-item').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(1.5)';
+                cursor.style.background = 'rgba(155, 35, 53, 0.1)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.background = 'transparent';
+            });
+        });
+        
+        // Navegación scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+        
+        // Menú móvil
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Animaciones de scroll
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+        
+        // FAQ
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+        
+        // Testimonios
+        const testimonials = document.querySelectorAll('.testimonial');
+        const dots = document.querySelectorAll('.dot');
+        let currentTestimonial = 0;
+        
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            testimonials[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentTestimonial = index;
+                showTestimonial(currentTestimonial);
+            });
+        });
+        
+        // Auto-rotar testimonios
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+        
+        // Filtros de catálogo
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
